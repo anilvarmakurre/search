@@ -42,7 +42,7 @@ class DestinationSearch extends Component {
 
         <ul className="inner-container">
           {searchResults.map(each => (
-            <DestinationItem destinationsList={each} key={each.uniqueNo} />
+            <DestinationItem destinationsList={each} key={each.id} />
           ))}
         </ul>
       </div>

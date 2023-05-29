@@ -1,1 +1,48 @@
-/* Write your CSS here */
+.bg-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  height: 100%;
+}
+.search-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.user-input {
+  height: 36px;
+  font-size: 22px;
+  width: 200px;
+  background-color: #f1f5f9;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-right-style: none;
+  padding: 10px;
+}
+.user-button {
+  height: 36px;
+  width: 40px;
+  padding: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-left-style: none;
+}
+.search-icon {
+  height: 28px;
+  width: 30px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-left-style: none;
+}
+.inner-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 900px;
+  padding: 40px;
+}

@@ -1,5 +1,3 @@
-import {Component} from 'react'
-
 import './index.css'
 
 const DestinationItem = probe => {
@@ -7,11 +5,9 @@ const DestinationItem = probe => {
   const {name, imgUrl} = destinationsList
 
   return (
-    <li className="inner-container">
-      <div>
-        <img className="img" src={imgUrl} />
-        <p className="para">{name}</p>
-      </div>
+    <li className="inner-box-container">
+      <img className="img" src={imgUrl} alt={name} />
+      <p className="para">{name}</p>
     </li>
   )
 }

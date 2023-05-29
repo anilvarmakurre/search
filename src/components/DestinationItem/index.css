@@ -1,1 +1,11 @@
-/* Write your CSS here */
+.inner-box-container {
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px;
+  margin: 20px;
+}
+.img {
+  height: 300px;
+  width: 300px;
+}

@@ -4,13 +4,8 @@ import DestinationItem from '../DestinationItem'
 
 import './index.css'
 
-const destinationSearch = probe => {
-  const {destinationsList} = probe
-  console.log(destinationsList)
-}
-
 class DestinationSearch extends Component {
-  state = {destinationsList: destinationsList, userSearch: ''}
+  state = {userSearch: ''}
 
   onChangeSearchInput = event => {
     this.setState({
@@ -19,20 +14,33 @@ class DestinationSearch extends Component {
   }
 
   render() {
-    const {userSearch, DestinationsList} = this.state
-    const searchResults = DestinationsList.filter(eachUser =>
+    const {destinationsList} = this.props
+    const {userSearch} = this.state
+    const searchResults = destinationsList.filter(eachUser =>
       eachUser.name.includes(userSearch),
     )
     return (
       <div className="bg-container">
         <h1 className="head">Destination Search</h1>
-        <input
-          type="search"
-          onChange={this.onChangeSearchInput}
-          value={userSearch}
-          icon="https://assets.ccbp.in/frontend/react-js/destinations-search-icon-img.png"
-        />
-        <ul>
+
+        <form className="search-input">
+          <input
+            className="user-input"
+            type="search"
+            onChange={this.onChangeSearchInput}
+            value={userSearch}
+            placeholder="Search"
+          />
+          <button className="user-button" type="submit">
+            <img
+              className="search-icon"
+              src="https://assets.ccbp.in/frontend/react-js/destinations-search-icon-img.png"
+              alt="search icon"
+            />
+          </button>
+        </form>
+
+        <ul className="inner-container">
           {searchResults.map(each => (
             <DestinationItem destinationsList={each} key={each.uniqueNo} />
           ))}
